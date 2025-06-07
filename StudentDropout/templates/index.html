@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #e9ecef;
+        margin: 0;
+        padding: 20px;
+    }
+    .form-container {
+        max-width: 800px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        border: 1px solid #007bff;
+    }
+    h1 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #333;
+    }
+    select, input[type="number"], input[type="radio"], input[type="checkbox"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 5px 0 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 2px solid #007bff;
+        transition: border-color 0.3s;
+    }
+    select:focus, input[type="number"]:focus {
+        border-color: #0056b3;
+        outline: none;
+    }
+    .radio-group, .checkbox-group {
+        display: flex;
+        gap: 15px;
+        margin: 5px 0 15px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    /* Additional styles for colorful sections */
+    .form-container > * {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-container > *:nth-child(2n) {
+        background-color: #d4edda; /* Light green */
+    }
+    .form-container > *:nth-child(2n+1) {
+        background-color: #cce5ff; /* Light blue */
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Student Information Form</h1>
+    <form>
+
+        <!-- Marital Status -->
+        <label for="marital-status">Marital Status</label>
+        <select id="marital-status">
+	    <option value="">Select the Martial Status</option>
+            <option value="1">Single</option>
+            <option value="2">Married</option>
+            <option value="3">Widower</option>
+            <option value="4">Divorced</option>
+            <option value="5">Facto union</option>
+            <option value="6">Legally separated</option>
+        </select>
+
+        <!-- Application Mode -->
+        <label for="application-mode">Application Mode</label>
+        <select id="application-mode">
+	    <option value="0">select application mode</option>
+            <option value="1">1st phase—general contingent</option>
+            <option value="2">Holders of other higher course</option>
+            <option value="3">1st phase—special contingent (Azores Island)</option>
+	    <option value="4">International student (bachelor)</option>
+	    <option value="5">2nd phase—general contingent</option>
+	    <option value="6">3rd phase—general contingent</option>
+ 	    <option value="7">Transfer</option>
+ 	    <option value="8">Change in course</option>
+ 	    <option value="9">Change in institution</option>
+	    <option value="7">Change in institution/course (International)</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+  	<label for="application order">Application Order:</label>
+   	<input type="number" step="1" min=0 max=1000  required><br>
+
+        <!-- Course -->
+        <label for="course">Course</label>
+        <select id="course">
+	    <option value="">Select the Course</option>
+            <option value="1">Biofuel Production Technologies</option>
+            <option value="2">Animation and Multimedia Design</option>
+            <option value="3">Social Service (evening attendance)</option>
+	    <option value="4">Animation and Multimedia Design</option>
+	    <option value="5">Communication Design</option>
+	    <option value="6">Veterinary Nursing</option>
+	    <option value="7">Hotel Management</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+
+        <!-- Attendance Type -->
+        <label>Attendance</label>
+        <div class="radio-group">
+            <label><input type="radio" name="attendance" value="1"> Daytime</label>
+            <label><input type="radio" name="attendance" value="0"> Evening</label>
+        </div>
+
+        <!-- Previous Qualification -->
+        <label for="previous-qualification">Previous Qualification</label>
+        <select id="previous-qualification">
+	    <option value="">select</option>
+            <option value="1">Secondary education</option>
+            <option value="2">Higher education—bachelor’s degree</option>
+	    <option value="3">Higher education—Master's degree</option>
+	    <option value="4">12th year of schooling completed</option>
+	    <option value="5">Technological specialization course</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+
+        <!-- Nationality -->
+        <label for="nationality">Nationality</label>
+        <select id="nationality">
+	    <option value="">select</option>
+            <option value="1">Portuguese</option>
+            <option value="2">German</option>
+	    <option value="3">India</option>
+   	    <option value="4">German</option>
+	    <option value="5">Spanish</option>
+	    <option value="6">Italian</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+
+        <!-- Mother's Qualification -->
+        <label for="Mothers-qualification">Mother's Qualification</label>
+        <select id="Mothers-qualification">
+	    <option value="">select</option>
+            <option value="1">Secondary Education—12th Year of Schooling or Equivalent</option>
+            <option value="2">Higher Education—bachelor’s degree</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+	<label for="Father's-qualification">Father's Qualification</label>
+        <select id="Fathers-qualification">
+	    <option value="">select</option>
+            <option value="1">Secondary Education—12th Year of Schooling or Equivalent</option>
+            <option value="2">Higher Education—bachelor’s degree</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+
+        <!-- Mother's Occupation -->
+        <label for="Mothers-occupation">Mother's Occupation</label>
+        <select id="Mothers-occupation">
+	    <option value="">select</option>
+            <option value="1">Student</option>
+            <option value="2">Representatives of the Legislative Power</option>
+	    <option value="3">Housewife</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+	<label for="Fathers-occupation">Father's Occupation</label>
+        <select id="Fathers-occupation">
+    	    <option value="">select</option>
+            <option value="1">Student</option>
+            <option value="2">Representatives of the Legislative Power</option>
+	    <option value="1">Daily wage worker</option>
+            <!-- Add other options as per the data provided -->
+        </select>
+
+        <!-- Displaced -->
+        <label>Displaced</label>
+        <div class="radio-group">
+            <label><input type="radio" name="displaced" value="1"> Yes</label>
+            <label><input type="radio" name="displaced" value="0"> No</label>
+        </div>
+
+        <!-- Educational Special Needs -->
+        <label>Educational Special Needs</label>
+        <div class="radio-group">
+            <label><input type="radio" name="special-needs" value="1"> Yes</label>
+            <label><input type="radio" name="special-needs" value="0"> No</label>
+        </div>
+
+        <!-- Debtor -->
+        <label>Debtor</label>
+        <div class="radio-group">
+            <label><input type="radio" name="debtor" value="1"> Yes</label>
+            <label><input type="radio" name="debtor" value="0"> No</label>
+        </div>
+
+        <!-- Tuition Fees Up to Date -->
+        <label>Tuition Fees Up to Date</label>
+        <div class="radio-group">
+            <label><input type="radio" name="tuition" value="1"> Yes</label>
+            <label><input type="radio" name="tuition" value="0"> No</label>
+        </div>
+
+        <!-- Gender -->
+        <label>Gender</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="1"> Male</label>
+            <label><input type="radio" name="gender" value="0"> Female</label>
+        </div>
+
+        <!-- Scholarship Holder -->
+        <label>Scholarship Holder</label>
+        <div class="radio-group">
+            <label><input type="radio" name="scholarship" value="1"> Yes</label>
+            <label><input type="radio" name="scholarship" value="0"> No</label>
+        </div>
+
+        <!-- Age at Enrollment -->
+        <label for="age-enrollment">Age at Enrollment</label>
+        <input type="number" id="age-enrollment" min="18" max="60">
+
+        <!-- International -->
+        <label>International</label>
+        <div class="radio-group">
+            <label><input type="radio" name="international" value="1"> Yes</label>
+            <label><input type="radio" name="international" value="0"> No</label>
+        </div>
+
+        
+	<label for="curricularUnitsCredited">18. Curricular Units 1 & 2 Semesters Credited:</label>
+    <input type="text" id="curricularUnitsCredited" name="curricularUnitsCredited">
+
+    <label for="curricularUnitsEnrolled">19. Curricular Units 1 & 2 Enrolled:</label>
+    <input type="text" id="curricularUnitsEnrolled" name="curricularUnitsEnrolled">
+
+    <label for="curricularUnitsEvaluation">20. Curricular Units 1 & 2 Evaluation:</label>
+    <input type="text" id="curricularUnitsEvaluation" name="curricularUnitsEvaluation">
+
+    <label for="curricularEventsApproved">21. Curricular Events 1 & 2 Approved:</label>
+    <input type="text" id="curricularEventsApproved" name="curricularEventsApproved">
+
+    <label for="curricularUnitsGrade">22. Curricular Units 1 & 2 Grade:</label>
+    <input type="text" id="curricularUnitsGrade" name="curricularUnitsGrade">
+    <!-- Target -->
+        <!--label>Target</label >
+        <div class="radio-group">
+            <label><input type="radio" name="target" value="graduate"> Graduate</label>
+            <label><input type="radio" name="target" value="dropout"> Dropout</label>
+            <label><input type="radio" name="target" value="enrolled"> Enrolled</label>
+        </div -- >
+
+        <!-- Submit Button -->
+        <button type="Target">Target</button>
+    </form>
+</div>
+
+</body>
+</html>
